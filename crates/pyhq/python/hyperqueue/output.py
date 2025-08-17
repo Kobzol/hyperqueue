@@ -41,7 +41,6 @@ def default_stdout() -> str:
 def default_stderr() -> str:
     return default_output("stderr")
 
-
 # TODO: how to resolve TASK_ID in the context of some other task?
 class Output:
     def __init__(self, name: str, filepath: Optional[str] = None, extension: Optional[str] = None):

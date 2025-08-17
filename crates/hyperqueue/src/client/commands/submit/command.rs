@@ -634,8 +634,11 @@ pub async fn submit_computation(
         }
     }
 
+    eprintln!("{:?}", opts.conf.array);
+
     let resources = opts.resource_request()?;
     let (ids, entries) = get_ids_and_entries(&opts)?;
+    eprintln!("{ids:?} {entries:?}");
     let task_count = ids.id_count();
 
     check_suspicious_options(&opts, task_count)?;

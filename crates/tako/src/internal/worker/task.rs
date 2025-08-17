@@ -37,6 +37,7 @@ pub struct Task {
 
 impl Task {
     pub fn new(message: ComputeTaskMsg, task_state: TaskState) -> Self {
+        eprintln!("Body size: {:?}", message.body.len());
         Self {
             state: task_state,
             id: message.id,

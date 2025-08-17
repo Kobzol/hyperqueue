@@ -361,6 +361,8 @@ fn build_tasks_array(
         entry,
     };
 
+    eprintln!("{task_desc:?}");
+
     let tasks = match entries {
         None => ids
             .iter()
